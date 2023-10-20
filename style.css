@@ -1,0 +1,519 @@
+/* подключаем шрифты fonts */
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+
+  /* для изменения алгоритма перерасчета высоты и ширины */
+  box-sizing: border-box;
+}
+
+input,
+textarea {
+  /* обнуляет значение по умолчанию */
+  outline: 0;
+}
+
+button {
+  border: 0;
+}
+
+/* brekpoint : 320 360 (480 500) 768 (960 980) 1024 1280 
+                1600 1920 2560(2k) 3840(4k) 
+      @media only screen and (min-width: 768px) {... }*/
+
+/* main */
+
+body {
+  background: #26262C;
+}
+
+@media only screen and (min-width: 1280px) {
+  .header {
+    background: rgb(38, 38, 44);
+    background: linear-gradient(90deg, rgba(38, 38, 44, 1) 33%, rgba(153, 157, 166, 0) 33%), url(img/wine.jpg);
+    background-size: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.header-top {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.logo {}
+
+@media only screen and (min-width: 1280px) {
+  .logo {
+    margin-bottom: 10px;
+  }
+}
+
+.header-container {
+  padding: 20px;
+}
+
+@media only screen and (min-width: 1920px) {
+  .header-container {
+    padding-left: 5%;
+  }
+}
+
+
+.menu {
+  position: relative;
+
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu {
+    padding-top: 0;
+  }
+}
+
+.menu-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  list-style-type: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-dropdown {
+    flex-direction: row;
+  }
+}
+
+.menu-link {
+  color: #FFF;
+
+  font-family: Mplus 1p;
+  font-size: 20px;
+  line-height: 126%;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.menu-dropdown>li>a:hover {
+  color: #710000;
+}
+
+.header-content {
+  text-align: center;
+}
+
+@media only screen and (min-width: 1280px) {
+  .header-content {
+    text-align: left;
+    max-width: 30%;
+  }
+}
+
+h1 {
+  color: #FFF;
+
+  font-size: 100px;
+  font-family: Playfair Display;
+  letter-spacing: 7.5px;
+}
+
+@media only screen and (min-width: 1280px) {
+  h1 {
+    position: relative;
+  }
+}
+
+.link {
+  display: inline;
+
+  padding: 0 45px 13px 15px;
+
+  background: #710000;
+  color: #FFF;
+
+  font-size: 20px;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .link {
+    display: block;
+    width: fit-content;
+
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .link {
+    position: absolute;
+    left: 60%;
+    top: calc(100% - 15px);
+
+    margin: 0;
+
+    /* управление переносами внутри */
+    white-space: nowrap;
+  }
+}
+
+.link:hover {
+  background-color: #FFF;
+  color: #710000;
+}
+
+.excerpt {
+  margin-top: 53px;
+  margin-bottom: 63px;
+
+  color: #FFF;
+
+  font-size: 20px;
+  font-family: Mplus 1p;
+  line-height: 126%;
+  letter-spacing: 0.4px;
+}
+
+button {
+  min-width: 204px;
+  min-height: 48px;
+  flex-shrink: 0;
+
+  color: #710000;
+
+  text-align: center;
+  font-size: 20px;
+  font-family: Mplus 1p;
+  font-weight: 500;
+  line-height: 126%;
+  letter-spacing: 0.4px;
+}
+
+/* слайдер */
+.slider {
+  width: 360px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider__line {
+  display: flex;
+  transition: all 1s;
+}
+
+.slider__img {
+  width: 360px;
+  height: 550px;
+}
+
+.slider__btn:hover{
+  cursor: pointer;
+  color: #030000;
+}
+
+.slider__btn-prev {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translate(-50%) rotate(180deg);
+  font-size: 30px;
+  
+  color: rgb(255, 255, 255, 0.849);
+  background-color: transparent;
+    
+  line-height: 1;
+
+}
+
+.slider__btn-next {
+  position: absolute;
+  left: 345px;
+  top: 50%;
+  transform: translate(-50%);
+  font-size: 30px;
+  
+  color: rgb(255, 255, 255, 0.849);
+  background-color: transparent;
+    
+  line-height: 1;
+  
+}
+
+
+
+
+
+
+
+.name-wine {
+  padding-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .name-wine {
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .name-wine {
+    padding-top: 119px;
+  }
+}
+
+.title {
+  width: 320px;
+
+  padding: 0 20px 14px 8px;
+
+  background: #710000;
+
+  color: #FFF;
+  font-size: 40px;
+  font-family: Playfair Display;
+  letter-spacing: 5.25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    margin-left: 50px;
+
+    width: 501px;
+
+    font-size: 60px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .title {
+    margin-left: 136px;
+  }
+}
+
+.wine {
+  padding-top: 37px;
+  margin-left: 15px;
+
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .wine {
+    width: 500px;
+
+    margin-left: 150px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .wine {
+
+    width: 700px;
+  }
+}
+
+.h3 {
+
+  color: #FFF;
+
+  font-size: 30px;
+  font-family: Mplus 1p;
+  font-weight: 500;
+  line-height: 126%;
+  letter-spacing: 0.6px;
+}
+
+.wine .h3::before {
+
+  background: lightgray;
+
+  content: "";
+  border-radius: 1ch;
+  padding-inline: 1ch;
+  margin-inline-end: 20px;
+  writing-mode: horizontal-tb;
+}
+
+.text {
+  margin: 20px 30px 50px 0;
+
+  color: #FFF;
+
+  font-size: 20px;
+  font-family: Mplus 1p;
+  line-height: 126%;
+  letter-spacing: 0.4px;
+}
+
+@media only screen and (min-width: 768px) {
+  .text {}
+}
+
+.collection-pic {
+  text-align: center;
+}
+
+@media only screen and (min-width: 1280px) {
+  .collection-pic {
+    margin-top: 40px;
+  }
+}
+
+.cont {
+  padding-top: 10px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .cont {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+  }
+}
+
+.cont img {
+  margin-bottom: 5px;
+}
+
+
+.offer {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.offer-cont {
+  text-align: center;
+
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .offer-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 70px;
+  }
+
+  .offer-text {
+    width: 560px;
+  }
+
+}
+
+.offer-cont img {
+  width: 100%;
+}
+
+.subtitle {
+  margin-bottom: 25px;
+
+  color: #FFF;
+  font-family: Mplus 1p;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 126%;
+  letter-spacing: 0.3px;
+}
+
+.button-centr {
+  text-align: center;
+}
+
+
+.footer {
+  background: #030000;
+}
+
+@media only screen and (min-width: 1280px) {
+  .footer {
+    width: 100%;
+    height: 182px;
+  }
+}
+
+.footer-cont {
+  padding-top: 20px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .footer-cont {
+    padding: 35px 150px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .social {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    order: 1;
+  }
+}
+
+.social-link {
+  min-width: 24px;
+  min-height: 23px;
+}
+
+.inform {
+  text-align: center;
+
+
+  font-family: Montserrat;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.2px;
+
+  color: #FFF;
+}
+
+@media only screen and (min-width: 1280px) {
+  .inform {
+    width: 560px;
+
+    text-align: start;
+  }
+}

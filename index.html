@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Wine</title>
+  <!-- подключение шрифта -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- шапка сайта -->
+  <header class="header">
+    <div class="header-container">
+      <div class="header-left">
+        <!-- навигационное меню -->
+        <div class="header-top">
+          <a href="" class="logo"><img src="img/white&red.svg" alt=""></a>
+          <nav class="menu">
+            <ul class="menu-dropdown">
+              <li class="menu-row"> <a class="menu-link" href="">Black Wine</a> </li>
+              <li class="menu-row"> <a class="menu-link" href="">White Wine</a> </li>
+              <li class="menu-row"> <a class="menu-link" href="">Special offer</a> </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-content">
+          <h1 class="h1"> WINE <a class="link" href="">Home production</a> </h1>
+
+          <p class="excerpt">
+            Мы изготавливаем домашние вины
+            с уникальным вкусом созданных на основе древнего рецепта. При этом
+            напиток может представлять опасность для организма, как и весь алкоголь.
+          </p>
+          <button class="button">Заказать</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- слайдер -->
+  <section class="slider" >
+    <div class="slider__line">
+      <img class="slider__img" src="img/black4.jpeg" alt="">
+      <img class="slider__img" src="img/black5.jpeg" alt="">
+      <img class="slider__img" src="img/black6.jpeg" alt="">
+      <img class="slider__img" src="img/black8.jpeg" alt="">
+      <img class="slider__img" src="img/black9.jpeg" alt="">
+    </div>
+    <button class="slider__btn slider__btn-prev">&#10148</button>
+    <button class="slider__btn slider__btn-next">&#10148</button>
+  </section>
+
+  <section class="name-wine">
+    <h2 class="title">Black Wine</h2>
+    <div class="wine">
+      <h3 class="h3">Пино-нуар</h3>
+      <p class="text">Идеальной компанией для этого сорта вина станут мясо с насыщенным вкусом и ароматом, плотная птица
+        и плотная рыба. Отлично сочетается пино-нуар и с итальянской кухней, а особенно с пастой.</p>
+      <h3 class="h3">Шираз</h3>
+      <p class="text">Удачно раскрывается оно с мясом. Будет еще лучше, если оно приготовлено на гриле. Вина, в которых
+        преобладают ягодные ароматы, отлично дополнят ягодные пироги. </p>
+      <h3 class="h3">Каберне</h3>
+      <p class="text">Каберне подходит практически к любому красному мясу. Можно не жалеть пряностей и трав. Максимально
+        вкусным получится сочетание каберне с ягнятиной, олениной, гусиным или утиным мясом.</p>
+    </div>
+  </section>
+
+  <section class="collection-pic">
+    <div class="cont">
+      <img src="img/black1.png" alt="">
+      <img src="img/black2.png" alt="">
+      <img src="img/black3.png" alt="">
+    </div>
+  </section>
+
+  <section class="name-wine">
+    <h2 class="title">White Wine</h2>
+    <div class="wine">
+      <h3 class="h3">Совиньон блан</h3>
+      <p class="text">Это вино обладает потрясающей гастрономической сочетаемостью. Оно идеально подходит к любым
+        морепродуктам и рыбе. Попробуйте также совиньон блан с французскими сырами — вы точно останетесь под
+        впечатлением.</p>
+      <h3 class="h3">Рислинг</h3>
+      <p class="text">Сухие версии рислинга, в которых содержание сахара стремится к нулю, прекрасно сочетаются с
+        овощами, грибами, курицей, индейкой, нежной телятиной и морепродуктами, а также дополняют всевозможные специи и
+        пряности.
+        Сладкие версии скорее самодостаточны и не требуют никакого дополнения в виде еды. </p>
+      <h3 class="h3">Шардоне</h3>
+      <p class="text">Бургундская версия, которая славится своей минеральностью и кремовостью, отлично подойдет к
+        сливочному соусу, нежной телятине и даже копченой рыбе. А более легкие, фруктовые версии можно пить в компании с
+        фруктовыми пирогами и блюдами с добавлением азиатских специй. Слушайте, что вам говорят ваши вкусовые рецепторы.
+      </p>
+    </div>
+  </section>
+
+  <section class="collection-pic">
+    <div class="cont">
+      <img src="img/white1.png" alt="">
+      <img src="img/white2.png" alt="">
+      <img src="img/white3.png" alt="">
+    </div>
+  </section>
+
+  <section class="offer">
+    <h2 class="title">Special offer</h2>
+    <div class="offer-cont">
+
+      <div class="offer-text">
+        <img src="img/offer1.png" alt="">
+        <h3 class="h3"> Экскурсии по винодельне </h3>
+        <p class="subtitle">
+          Вы можете пройтись по нашей ферме, в перерыве освежиться игристым с устрицами, а шеф-повар удивит закусками
+          под сет белых вин
+        </p>
+      </div>
+
+      <div class="offer-text">
+
+        <img src="img/offer2.png" alt="">
+        <h3 class="h3"> Самодельное вино </h3>
+        <p class="subtitle">
+          Мы приглашаем вас в нашу мастерскую, где вы собственноручно создатите изысканное вино. Мы создадим для вас все
+          комфортные условия и будем помогать в приготовлении
+        </p>
+      </div>
+
+    </div>
+    <div class="button-centr">
+      <button type="button" class="button">Заказать</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-cont">
+      <div class="social">
+        <a href="" class="social-link"><img src="img/instagram.svg"></a>
+        <a href="" class="social-link"><img src="img/telegram.svg"></a>
+        <a href="" class="social-link"><img src="img/vk.svg"></a>
+      </div>
+      <p class="inform">
+        &copy 1994-2022, АО «Дон-Строй Инвест» <br>
+        Материалы, представленные на сайте, не являются публичной офертой <br>
+        Политика конфиденциальности
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
