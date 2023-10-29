@@ -1,19 +1,25 @@
 const slider = document.querySelector('.slider');
-const sliderLine = document.querySelectorAll('.slider__line');
-const sliderImeg = document.querySelector('.slider__line');
+const sliderImages = document.querySelectorAll('.slider__img');
+const sliderLine = document.querySelector('.slider__line');
 
-const sliderPrev = document.querySelector('.slider__btn-prev');
-const sliderNext = document.querySelector('.slider__btn-next');
+const sliderBtnNext = document.querySelector('.slider__btn-next');
+const sliderBtnPrev = document.querySelector('.slider__btn-prev');
 
 let sliderCount = 0;
 let sliderWidth = slider.offsetWidth;
 
-sliderNext.addEventListener('click', nextSlide);
-sliderPrev.addEventListener('click', prevSlide);
+//перемотка вперёд по нажатию на кнопку
+sliderBtnNext.addEventListener('click', nextSlide);
+//перемотка назад по нажатию на кнопку
+sliderBtnPrev.addEventListener('click', prevSlide);
 
 
 function nextSlide() {
     sliderCount++;
+
+    if (sliderCount >= 5) {
+        sliderCount = 0;
+    }
     console.log(sliderCount);
 
     rollSlider();
@@ -21,13 +27,18 @@ function nextSlide() {
 
 function prevSlide() {
     sliderCount--;
-    console.log(sliderCount);
+
+    if (sliderCount < 0) {
+        sliderCount = 4;
+    }
 
     rollSlider(); 
 }
-// console.log(sliderLine);
 
 function rollSlider() {
-   
-    sliderLine[0].style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
+    sliderLine.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
 }
+
+setInterval(() => {
+    nextSlide()
+}, 3000);

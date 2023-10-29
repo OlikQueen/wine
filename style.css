@@ -229,12 +229,7 @@ button {
 
 .slider__img {
   width: 360px;
-  height: 550px;
-}
-
-.slider__btn:hover{
-  cursor: pointer;
-  color: #030000;
+  /* height: 550px; */
 }
 
 .slider__btn-prev {
@@ -263,6 +258,11 @@ button {
     
   line-height: 1;
   
+}
+
+.slider__btn-prev:hover, .slider__btn-next:hover {
+  cursor: pointer;
+  color: #030000;
 }
 
 
