@@ -219,13 +219,18 @@ button {
 .slider {
   width: 360px;
   overflow: hidden;
-  position: relative;  
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
+
 @media only screen and (min-width: 768px) {
-  .slider{
+  .slider {
     display: none;
   }
 }
+
 .slider__line {
   display: flex;
   transition: all 1s;
@@ -242,10 +247,10 @@ button {
   top: 50%;
   transform: translate(-50%) rotate(180deg);
   font-size: 30px;
-  
+
   color: rgb(255, 255, 255, 0.849);
   background-color: transparent;
-    
+
   line-height: 1;
 
 }
@@ -256,15 +261,16 @@ button {
   top: 50%;
   transform: translate(-50%);
   font-size: 30px;
-  
+
   color: rgb(255, 255, 255, 0.849);
   background-color: transparent;
-    
+
   line-height: 1;
-  
+
 }
 
-.slider__btn-prev:hover, .slider__btn-next:hover {
+.slider__btn-prev:hover,
+.slider__btn-next:hover {
   cursor: pointer;
   color: #030000;
 }
