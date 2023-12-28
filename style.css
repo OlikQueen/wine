@@ -219,9 +219,13 @@ button {
 .slider {
   width: 360px;
   overflow: hidden;
-  position: relative;
+  position: relative;  
 }
-
+@media only screen and (min-width: 1280px) {
+  .slider {
+    display: none;
+  }
+}
 .slider__line {
   display: flex;
   transition: all 1s;
