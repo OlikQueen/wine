@@ -221,14 +221,9 @@ button {
   overflow: hidden;
   position: relative;  
 }
-@media only screen and (min-width: 1280px) {
-  .slider {
-    display: none;
-  }
-}
 @media only screen and (min-width: 768px) {
   .slider{
-    transform: translateX(60%);
+    display: none;
   }
 }
 .slider__line {
