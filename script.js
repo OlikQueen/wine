@@ -20,8 +20,6 @@ function nextSlide() {
     if (sliderCount >= sliderImages.length) {
         sliderCount = 0;
     }
-    console.log(sliderCount);
-
     rollSlider();
 }
 
