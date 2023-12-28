@@ -226,6 +226,11 @@ button {
     display: none;
   }
 }
+@media only screen and (min-width: 768px) {
+  .slider{
+    transform: translateX(60%);
+  }
+}
 .slider__line {
   display: flex;
   transition: all 1s;
