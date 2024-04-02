@@ -1,0 +1,40 @@
+// Media Queries
+$breakpoints: (
+  "xs": $screen-xs,
+  "sm": $screen-sm,
+  "md": $screen-md,
+  "lg": $screen-lg,
+  "xl": $screen-xl,
+  "xxl": $screen-xxl,
+  "2k": $screen-2k,
+  "4k": $screen-4k,
+  
+);
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+
+// px to vw
+// @mixin vw-360($property, $px-value) {
+//   $vw-value: calc($px-value / 360 * 100);
+//   #{$property}: #{$vw-value}vw;
+// }
+
+// @mixin vw-768($property, $px-value) {
+//   $vw-value: calc($px-value / 768 * 100);
+//   #{$property}: #{$vw-value}vw;
+// }
+
+// @mixin vw-1368($property, $px-value) {
+//   $vw-value: calc($px-value / 1368 * 100);
+//   #{$property}: #{$vw-value}vw;
+// }

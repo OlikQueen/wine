@@ -1,0 +1,74 @@
+@mixin m($direction, $value) {
+  margin-#{$direction}: #{$value}px;
+}
+
+@mixin mx($value) {
+  margin-left: #{$value}px;
+  margin-right: #{$value}px;
+}
+
+@mixin my($value) {
+  margin-top: #{$value}px;
+  margin-bottom: #{$value}px;
+}
+
+
+@mixin p($direction, $value) {
+  padding-#{$direction}: #{$value}px;
+}
+
+@mixin px($value) {
+  padding-left: #{$value}px;
+  padding-right: #{$value}px;
+}
+
+@mixin py($value) {
+  padding-top: #{$value}px;
+  padding-bottom: #{$value}px;
+}
+
+$breakpoints: (
+  'tablet': 768px,
+  'laptop': 1368px,
+  'desktop': 1920px
+);
+
+@for $i from 0 through 100 { 
+  $value: $i * 1;
+
+  .m#{$value} { @include mx($value); @include my($value); }
+  .mt#{$value} { @include m('top', $value); }
+  .mb#{$value} { @include m('bottom', $value); }
+  .ml#{$value} { @include m('left', $value); }
+  .mr#{$value} { @include m('right', $value); }
+  .mx#{$value} { @include mx($value); }
+  .my#{$value} { @include my($value); }
+
+  .p#{$value} { @include px($value); @include py($value); }
+  .pt#{$value} { @include p('top', $value); }
+  .pb#{$value} { @include p('bottom', $value); }
+  .pl#{$value} { @include p('left', $value); }
+  .pr#{$value} { @include p('right', $value); }
+  .px#{$value} { @include px($value); }
+  .py#{$value} { @include py($value); }
+
+  @each $name, $width in $breakpoints {
+    @media (min-width: $width) {
+      .#{$name}-m#{$value} { @include mx($value); @include my($value); }
+      .#{$name}-mt#{$value} { @include m('top', $value); }
+      .#{$name}-mb#{$value} { @include m('bottom', $value); }
+      .#{$name}-ml#{$value} { @include m('left', $value); }
+      .#{$name}-mr#{$value} { @include m('right', $value); }
+      .#{$name}-mx#{$value} { @include mx($value); }
+      .#{$name}-my#{$value} { @include my($value); }
+
+      .#{$name}-p#{$value} { @include px($value); @include py($value); }
+      .#{$name}-pt#{$value} { @include p('top', $value); }
+      .#{$name}-pb#{$value} { @include p('bottom', $value); }
+      .#{$name}-pl#{$value} { @include p('left', $value); }
+      .#{$name}-pr#{$value} { @include p('right', $value); }
+      .#{$name}-px#{$value} { @include px($value); }
+      .#{$name}-py#{$value} { @include py($value); }
+    }
+  }
+}

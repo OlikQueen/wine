@@ -1,0 +1,178 @@
+@import "../mixins";
+
+
+.list {
+    $block: &;
+
+    &__name-wine {
+        padding-top: 20px;
+
+        @include mq(md) {
+            padding-top: 20px;
+        }
+
+        @include mq(lg) {
+            padding-top: 119px;
+        }
+    }
+
+    &__title {
+        width: 320px;
+
+        padding: 0 20px 14px 8px;
+
+        background: $hover-color;
+
+        color: $text-color;
+        font-size: 40px;
+        font-family: Playfair Display;
+        letter-spacing: 5.25px;
+
+        @include mq(md) {
+            margin-left: 50px;
+
+            width: 501px;
+
+            font-size: 60px;
+        }
+
+        @include mq(lg) {
+            margin-left: 136px;
+        }
+
+        @include mq(xxl) {
+            transform: translateX(120%);
+        }
+    }
+
+    &__wine {
+        padding-top: 37px;
+        margin-left: 15px;
+
+        text-align: left;
+
+        @include mq(md) {
+            width: 500px;
+
+            margin-left: 150px;
+        }
+
+        @include mq(lg) {
+            width: 700px;
+        }
+    }
+
+    &__h3 {
+        color: $text-color;
+
+        font-size: 30px;
+        font-family: $font-family-primary;
+        font-weight: 500;
+        line-height: 126%;
+        letter-spacing: 0.6px;
+
+    }
+
+    &__h3::before {
+
+        background: $befo-color;
+
+        content: "";
+        border-radius: 1ch;
+        padding-inline: 1ch;
+        margin-inline-end: 20px;
+        writing-mode: horizontal-tb;
+    }
+
+    &__text {
+        margin: 20px 30px 50px 0;
+
+        color: $text-color;
+
+        font-size: 20px;
+        font-family: $font-family-primary;
+        line-height: 126%;
+        letter-spacing: 0.4px;
+
+        @include mq(xxl) {
+            font-size: 30px;
+        }
+    }
+
+    &__left-name-wine {
+
+        @include mq(xxl) {
+            transform: translateY(-100%);
+            float: right;
+            display: block;
+        }
+
+    }
+
+    &__collection-pic {
+        text-align: center;
+
+        @include mq(lg) {
+            margin-top: 40px;
+        }
+    }
+
+    &__cont img {
+        margin-bottom: 5px;
+    }
+
+    &__cont {
+        padding-top: 10px;
+
+        @include mq(lg) {
+            display: flex;
+            gap: 60px;
+            justify-content: center;
+        }
+
+        @include mq(xxl) {
+            display: flex;
+            gap: 0px;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+    }
+
+    &__img-one-black {
+        @include mq(xxl) {
+            transform: translate(-200%, 120%);
+        }
+    }
+
+    &__img-two-black {
+        @include mq(xxl) {
+            transform: translate(-60%, -50%);
+        }
+    }
+
+    
+    &__img-three-black {
+        @include mq(xxl) {
+            transform: translate(-60%, -15%);
+        }
+    }
+
+    &__img-one-white {
+        @include mq(xxl) {
+            transform: translate(-60%, -10%);
+        }
+    }
+
+    &__img-two-white {
+        @include mq(xxl) {
+            transform: translate(-60%, 30%);
+        }
+    }
+
+    &__img-three-white {
+        @include mq(xxl) {
+            transform: translate(-200%, -150%);
+        }
+    }
+}

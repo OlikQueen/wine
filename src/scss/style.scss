@@ -1,0 +1,9 @@
+// важна последовательность: 1 - переменные
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+@import 'global';
+@import 'indent';
+
+
+@import 'blocks/index'; 

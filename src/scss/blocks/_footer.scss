@@ -1,0 +1,69 @@
+@import "../mixins";
+
+.footer {
+    background: $futer-color;
+
+    @include mq(lg) {
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        bottom: 0;
+    }
+
+    &__cont {
+        padding-top: 20px;
+
+        @include mq(lg) {
+            padding: 35px 150px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @include mq(xxl) {
+            padding: 15px 150px;
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-around;
+
+        margin-bottom: 20px;
+
+        @include mq(lg) {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            order: 1;
+        }
+    }
+
+    &__social-link {
+        min-width: 24px;
+        min-height: 23px;
+    }
+
+    
+    &__inform {
+        text-align: center;
+
+        font-family: $font-family-second;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: 0.2px;
+
+        color: $text-color;
+
+        @include mq(lg) {
+            width: 560px;
+
+            text-align: start;
+        }
+    }
+}

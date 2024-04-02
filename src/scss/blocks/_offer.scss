@@ -1,0 +1,117 @@
+@import "../mixins";
+
+.offer {
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+    &__title {
+        width: 320px;
+
+        padding: 0 20px 14px 8px;
+
+        background: $hover-color;
+
+        color: $text-color;
+        font-size: 40px;
+        font-family: Playfair Display;
+        letter-spacing: 5.25px;
+
+        @include mq(md) {
+            margin-left: 50px;
+
+            width: 501px;
+
+            font-size: 60px;
+        }
+
+        @include mq(lg) {
+            margin-left: 136px;
+        }
+
+        @include mq(xxl) {
+            transform: translateX(120%);
+        }
+    }
+
+    &__cont {
+        text-align: center;
+
+        padding-top: 30px;
+        margin-bottom: 20px;
+
+        @include mq(lg) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 70px;
+        }
+
+        @include mq(xxl) {
+            transform: translateX(10%);
+            margin-top: 40px;
+            margin-bottom: 100px;
+        }
+
+    }
+
+    &__cont img {
+        width: 100%;
+    }
+
+    &__text {
+        @include mq(lg) {
+            width: 560px;
+        }
+        
+    }
+
+
+    &__h3 {
+        color: $text-color;
+
+        font-size: 30px;
+        font-family: $font-family-primary;
+        font-weight: 500;
+        line-height: 126%;
+        letter-spacing: 0.6px;
+    }
+
+
+    &__subtitle {
+        margin-bottom: 25px;
+
+        color: $text-color;
+        font-family: $font-family-primary;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 126%;
+        letter-spacing: 0.3px;
+    }
+
+    &__button-centr {
+        text-align: center;
+
+        @include mq(xxl) {
+            position: absolute;
+            left: 45%;
+        }
+    }
+
+    
+    &__button {
+        min-width: 204px;
+        min-height: 48px;
+        flex-shrink: 0;
+
+        color: $hover-color;
+
+        text-align: center;
+        font-size: 20px;
+        font-family: $font-family-primary;
+        font-weight: 500;
+        line-height: 126%;
+        letter-spacing: 0.4px;
+    }
+
+}
